@@ -21,7 +21,7 @@ export default function Portifolio(){
             if (repo.fork) {
                 forked = "(fork)"
             }
-            return <a href={repo.url} target="_blank">{
+            return <a href={repo.html_url} target="_blank">{
                 repo.name}
                 <span style={{color: '#e59f16'}}>{' ('+created.getFullYear()+'-'+updated.getFullYear()+') '
                 }</span>
