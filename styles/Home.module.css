@@ -39,7 +39,7 @@
     font-family: JetBrains Mono;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: calc(12px + 1vh);
 }
 .pink {
     color: #fd88ff;

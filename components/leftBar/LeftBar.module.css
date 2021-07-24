@@ -72,9 +72,17 @@
     border-radius: 15px 15px 15px 0;
     animation: notification 0.5s forwards;
   }
-  .coding, .downloadCV {
+  .coding {
     width: 100%;
-    height: calc((100% - 400px)/2);
+    height: 50%;
+    background-color: #353535;
+    overflow: auto;
+    color: #bbb;
+    padding: 15px;
+  }
+  .downloadCV {
+    width: 100%;
+    height: 20%;
     background-color: #353535;
     overflow: auto;
     color: #bbb;
