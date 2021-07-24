@@ -37,7 +37,15 @@ export default function Home(){
                 <span style={{marginLeft: 40}} className={styles.yellow}>"Socket.io"<span className={styles.gray}>,</span></span>
                 <span className={styles.gray}>]</span>
             </div>
-            <div className={styles.academic}></div>
+            <div className={styles.academic}>
+                <span className={styles.pink}>const <span className={styles.gray}>Formação</span> = <span className={styles.gray}>[</span></span>
+                <span style={{marginLeft: 40}} className={styles.yellow}>"Sistemas para Internet"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
+                <span style={{marginLeft: 80}} className={styles.gray}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"Estácio de Sá"</span>,</span>
+                <span style={{marginLeft: 80}} className={styles.gray}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2021</span>,</span>
+                <span style={{marginLeft: 80}} className={styles.gray}>PrevisaoTermino<span className={styles.pink}> : </span><span className={styles.lightblue}>2023</span></span>
+                <span style={{marginLeft: 40}} className={styles.gray}>{'}'}</span>
+                <span className={styles.gray}>]</span>
+            </div>
         </div>
     </div>
     )

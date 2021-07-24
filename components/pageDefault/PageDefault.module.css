@@ -111,9 +111,11 @@
   left: 26px;
 }
 .hamburguerLine::before {
+  width: 27px;
   top: 33px;
 }
 .hamburguerLine::after {
+  width: 22px;
   top: 45px;
 }
 .active .hamburguerLine::before {
@@ -132,7 +134,13 @@
   width: 0;
 }
 .hamburguer:hover .hamburguerLine,.hamburguer:hover .hamburguerLine::before,.hamburguer:hover .hamburguerLine::after {
-  background-color: white;
+  background-color: #e59f16;
+}
+.hamburguer:hover .hamburguerLine::before {
+  width: 30px;
+}
+.hamburguer:hover .hamburguerLine::after {
+  width: 30px;
 }
 .links {
   display: none;
@@ -146,9 +154,10 @@
 }
 .active .links a {
   cursor: pointer;
+  margin: 10px;
 }
 .active .links a:hover {
-  color: #fff;
+  color: #e59f16;
 }
 .actualPage {
   transform: rotate(90deg);

@@ -1,9 +1,25 @@
+import { useRouter } from 'next/dist/client/router'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+
 import LeftBar from '../leftBar'
 import styles from './PageDefault.module.css'
 
 
 export default function PageDefault({children}) {
+  const route = useRouter()
+  const [ pagePath, setPagePath ] = useState(route.asPath)
+  useEffect(()=>{
+    setPagePath(route.asPath)
+  },[route])
+  const pageName = {
+    '/' : "Início",
+    '/cv' : "Curriculo",
+    '/contato': "Contato",
+    '/portifolio': "Portifólio"
+  }
+
   function handleHamburguerActive(){
     document.querySelector('.'+styles.right).classList.toggle(styles.active)
     document.querySelector('.'+styles.centershadow).classList.toggle(styles.activeCenter)
@@ -30,13 +46,22 @@ export default function PageDefault({children}) {
           <div className={styles.hamburguer} onClick={handleHamburguerActive}>
             <span className={styles.hamburguerLine}></span>
           </div>
-          <div className={styles.links}>
-            <a>Home</a>
-            <a>Home</a>
-            <a>Home</a>
+          <div onClick={handleHamburguerActive} className={styles.links}>
+            <Link href="/">
+              <a>Inicio</a>
+            </Link>
+            <Link href="/portifolio">
+              <a>Portifolio</a>
+            </Link>
+            <Link href="/cv">
+              <a>Curriculo</a>
+            </Link>
+            <Link href="/contato">
+              <a>Contato</a>
+            </Link>
           </div>
           <div className={styles.actualPage}>
-            <span>Início</span>
+            <span>{ pageName[pagePath] }</span>
           </div>
         </div>
       </main>

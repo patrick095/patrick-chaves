@@ -52,7 +52,6 @@ export default function LeftBar(){
           <div className={styles.coding}>
             <h2>Coding (Github)</h2>
             {languages.map(language => {
-                console.log(coding)
             return <Language key={language} language={language} percent={coding[language]} />
             })}
           </div>
