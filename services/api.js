@@ -16,3 +16,8 @@ export default function createInstance(){
         baseURL: 'https://git-languages.herokuapp.com'
     })
 }
+export function createGitInstance(){
+    return axios.create({
+        baseURL: 'https://api.github.com/'
+    })
+}

@@ -1,0 +1,16 @@
+.Portifolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #bbb;
+    font-family: JetBrains Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+}
+.Portifolio a {
+}
+.Portifolio a:hover {
+    color: #e59f16;
+}
