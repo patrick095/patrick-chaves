@@ -5,7 +5,6 @@ import styles from '../styles/Portifolio.module.css'
 
 export default function Portifolio(){
     const [ repos, setRepos ] = useState([])
-    console.log(repos)
     useEffect(()=>{
         const api = createGitInstance()
         api.get('/users/patrick095/repos')
