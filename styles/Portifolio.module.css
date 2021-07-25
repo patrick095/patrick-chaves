@@ -1,7 +1,8 @@
 .Portifolio {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     padding: 40px;
     color: #bbb;
     font-family: JetBrains Mono;
@@ -9,8 +10,63 @@
     font-weight: normal;
     font-size: 1vw;
 }
-.Portifolio a {
-}
 .Portifolio a:hover {
     color: #e59f16;
+}
+.Portifolio h1 {
+    font-size: 1.5vw;
+    margin: 10px 0;
+}
+.gitList {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: #292929;
+    border-radius: 5px;
+    padding: 30px;
+}
+.personalList {
+    width: 40%;
+    padding: 30px;
+    min-height: 200px;
+    background-color: #292929;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.personalProject{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #444444;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.personalProject h4 {
+    margin: 5px;
+    color: #e59f16;
+}
+.personalProject h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}
+.personalProject h2:hover {
+    color: #e59f16;
+}
+.personalProject span {
+    font-size: 0.7vw;
+    margin: 4px;
+}
+.personalProject a {
+    display: inline-flex;
+    margin: 10px;
+}
+.personalProjectD {
+    overflow: hidden;
+    height: 30px;
+    background-color: #292929;
+    padding: 0;
 }
