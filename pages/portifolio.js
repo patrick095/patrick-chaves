@@ -61,7 +61,7 @@ export default function Portifolio(){
                     Link <LinkIcon />
                 </a>
                 <h4>Descrição:</h4>
-                <span>Site criado para meu time local de voleibol.</span>
+                <span>Site criado para meu time local de voleibol, onde é possivel gerenciar todo o site por uma pagina de gerenciamento onde tem o controle das notícias, elencos e jogos.</span>
                 <h4>Tecnologias:</h4>
                 <span><strong>Front-end:</strong> ReactJs, axios, styled-components, nuka-carousel </span>
                 
