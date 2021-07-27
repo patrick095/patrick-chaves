@@ -28,3 +28,8 @@
         width: 0px;
     }
 }
+@media screen and (max-width: 800px) {
+    .barBackground {
+        width: 100%;
+    }
+}

@@ -47,7 +47,7 @@
     position: absolute;
     top: 40px;
     right: 80px;
-    z-index: 999;
+    z-index: 1;
     cursor: pointer;
   }
   .notification::before {
@@ -137,7 +137,6 @@
     color: #e59f16;
   }
 
-
   .hidden {
     display: none;
     animation: notification 0.5s reverse backwards;
@@ -168,3 +167,43 @@
       opacity: 0;
     }
   }
+
+  @keyframes showLeft {
+    to {
+      transform: translate(450px);
+    }
+    
+  }
+
+@media screen and (max-width: 800px) {
+  .left {
+    width: calc(100vw - 100px);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+    left: -450px;
+  }
+  .name h1 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  .notification {
+    right: 53px;
+  }
+  .notificationMsg {
+    right: 20px;
+    z-index: 999999;
+  }
+  .coding {
+    height: 30%;
+  }
+  .contact {
+    bottom: 50px;
+  }
+  .downloadCV {
+    height: 10%;
+  }
+  .activeMenu {
+    animation: showLeft 0.3s ease-in-out forwards;
+  }
+}

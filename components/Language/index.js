@@ -29,7 +29,7 @@ export default function Language({language, percent}){
                 <span id='percent'><span id={'percent'+language}>{percentNumber}</span>%</span>
             </div>
             <div className={styles.barBackground}>
-                <div className={styles.progressBar} style={{width: (279 * percentFinal/ 100)+'px'}}></div>
+                <div className={styles.progressBar} style={{width: percentFinal+'%'}}></div>
             </div>
         </div>
     )

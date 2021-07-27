@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import Image from 'next/image'
 import { createGitInstance } from "../services/api"
 import styles from '../styles/Portifolio.module.css'
 import LinkIcon from '@material-ui/icons/Link'
@@ -20,6 +19,7 @@ export default function Portifolio(){
         let projects = Array.from(document.querySelectorAll('.'+styles.personalProject))
         projects.map(project => project.classList.add(styles.personalProjectD))
         document.querySelector('#'+id).classList.toggle(styles.personalProjectD)
+        window.location.hash = '#'+id
     }
 
     return (

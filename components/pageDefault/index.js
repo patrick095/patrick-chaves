@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import LeftBar from '../leftBar'
 import styles from './PageDefault.module.css'
+import LeftBarStyles from '../leftBar/LeftBar.module.css'
 
 
 export default function PageDefault({children}) {
@@ -23,12 +24,14 @@ export default function PageDefault({children}) {
   function handleHamburguerActive(){
     document.querySelector('.'+styles.right).classList.toggle(styles.active)
     document.querySelector('.'+styles.centershadow).classList.toggle(styles.activeCenter)
+    document.querySelector('.'+LeftBarStyles.left).classList.toggle(LeftBarStyles.activeMenu)
   }
   
   return (
     <div className={styles.container}>
       <Head>
         <title>Home - Patrick Chaves</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Patrick Chaves - Desenvolvedor Fullstack javascript" />
       </Head>
 
@@ -40,7 +43,6 @@ export default function PageDefault({children}) {
         </div>
           <div className={styles.footer}>
             <span>© 2021 All Rights Reserved.</span>
-            <span>email: patrick095@gmail.com</span>
           </div>
         <div className={styles.right}>
           <div className={styles.hamburguer} onClick={handleHamburguerActive}>

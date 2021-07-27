@@ -70,3 +70,22 @@
     background-color: #292929;
     padding: 0;
 }
+@media screen and (max-width: 800px) {
+    .Portifolio {
+        flex-direction: column;
+        padding: 20px;
+        font-size: 16px;
+    }
+    .Portifolio h1 {
+        font-size: 24px;
+    }
+    .gitList {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .personalList {
+        width: 100%;
+        padding: 20px;
+    }
+}

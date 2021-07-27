@@ -4,14 +4,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
 }
 .main {
   display: flex;
   flex-direction: row;
   align-items: initial;
   background-color: #393939;
-  min-width: 1024px;
+  /* min-width: 1024px; */
   width: 80vw;
   max-width: 1500px;
   height: 100%;
@@ -30,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999;
 }
 .center {
   position: relative;
@@ -58,7 +58,7 @@
   justify-content: space-between;
   padding: 20px;
   color: #bbbbbb;
-  z-index: 999;
+  z-index: 9999;
 }
 .hamburguer {
   width: 100%;
@@ -82,6 +82,7 @@
   top: 0;
   left: 0;
   opacity: 0;
+  z-index: 99;
 }
 .activeCenter {
   opacity: 0.7;
@@ -173,5 +174,69 @@
 @media screen and (max-width: 1368px) {
   .main {
     width: 100vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .right {
+    width: 60px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .hamburguer {
+    height: 60px;
+  }
+  .active .hamburguer {
+    padding: 5px;
+    border-radius: 5px 0 0 0;
+  }
+  .hamburguerLine::before {
+    width: 27px !important;
+    left: 12px;
+    top: 17px;
+  }
+  .hamburguerLine::after {
+    width: 22px !important;
+    left: 12px;
+    top: 35px;
+  }
+  .active {
+    width: 100px;
+    border-radius: 5px 0 0 0;
+  }
+  .active .hamburguerLine::before {
+    left: auto;
+    right: 20px;
+    top: 30px;
+    width: 30px !important;
+  }
+  .active .hamburguerLine::after {
+    left: auto;
+    right: 20px;
+    top: 30px;
+    width: 30px !important;
+  }
+  .center {
+    width: calc(100vw - 60px);
+  }
+  .footer {
+    width: 100vw;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
   }
 }

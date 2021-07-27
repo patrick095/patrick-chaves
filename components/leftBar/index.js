@@ -13,6 +13,7 @@ export default function LeftBar(){
 
   const [ coding, setCoding ] = useState({})
   const [ languages, setLanguages ] = useState([])
+  const [ showNotification, setShowNotification ] = useState(false)
 
   useEffect(()=>{
     const api = createApi()
@@ -29,8 +30,21 @@ export default function LeftBar(){
 
   function toogleNotification(){
     let notification = document.querySelector('#notificationMsg')
-    notification.classList.toggle(styles.hidden)
-    notification.classList.toggle(styles.notificationMsg)
+    if (!showNotification) {
+      notification.classList.remove(styles.hidden)
+      notification.classList.add(styles.notificationMsg)
+      setShowNotification(true)
+      setTimeout(() => {
+        notification.classList.add(styles.hidden)
+        notification.classList.remove(styles.notificationMsg)
+        setShowNotification(false)
+      }, 5000)
+    }
+    else {
+        notification.classList.add(styles.hidden)
+        notification.classList.remove(styles.notificationMsg)
+        setShowNotification(false)
+    }
   }
 
     return (
@@ -71,6 +85,9 @@ export default function LeftBar(){
           <a title="Telegram" href="https://t.me/patrick095" target="_blank" className={styles.contactIcons}>
             <svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" style={{fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 1.41421,  }}><path id="telegram-4" d="M12,0c-6.626,0 -12,5.372 -12,12c0,6.627 5.374,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.628 -5.373,-12 -12,-12Zm3.224,17.871c0.188,0.133 0.43,0.166 0.646,0.085c0.215,-0.082 0.374,-0.267 0.422,-0.491c0.507,-2.382 1.737,-8.412 2.198,-10.578c0.035,-0.164 -0.023,-0.334 -0.151,-0.443c-0.129,-0.109 -0.307,-0.14 -0.465,-0.082c-2.446,0.906 -9.979,3.732 -13.058,4.871c-0.195,0.073 -0.322,0.26 -0.316,0.467c0.007,0.206 0.146,0.385 0.346,0.445c1.381,0.413 3.193,0.988 3.193,0.988c0,0 0.847,2.558 1.288,3.858c0.056,0.164 0.184,0.292 0.352,0.336c0.169,0.044 0.348,-0.002 0.474,-0.121c0.709,-0.669 1.805,-1.704 1.805,-1.704c0,0 2.084,1.527 3.266,2.369Zm-6.423,-5.062l0.98,3.231l0.218,-2.046c0,0 3.783,-3.413 5.941,-5.358c0.063,-0.057 0.071,-0.153 0.019,-0.22c-0.052,-0.067 -0.148,-0.083 -0.219,-0.037c-2.5,1.596 -6.939,4.43 -6.939,4.43Z"/></svg>
           </a>
+          <a title="Email" href="mailto:patrick095@gmail.com" target="_blank" className={styles.contactIcons}>
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.001 16.917c.552 0 .999-.448.999-.999v-7.919c0-.551-.448-.999-.999-.999h-12.002c-.551 0-.999.448-.999.999v7.919c0 .551.448.999.999.999h12.002zm-6.001-3.55l-5.45-3.782-.011 6.748h10.899v-6.748l-5.438 3.782zm5.174-5.784c-1.527 1.064-5.174 3.634-5.174 3.634l-5.203-3.634h10.377z"/></svg>
+            </a>
           </div>
         </div>
     )

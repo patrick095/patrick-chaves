@@ -25,35 +25,35 @@ export default function Home(){
         <div className={styles.others}>
             <div className={styles.stacks}>
                 <span className={styles.pink}>let <span className={styles.gray}>Stacks = [</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"JavaScript"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Typescript"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"React"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"NextJs"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"VueJs"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"NodeJs"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Postgres/MySql"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"MongoDb"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Docker"<span className={styles.gray}>,</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Socket.io"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"JavaScript"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"Typescript"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"React"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"NextJs"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"VueJs"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"NodeJs"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"Postgres/MySql"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"MongoDb"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"Docker"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"Socket.io"<span className={styles.gray}>,</span></span>
                 <span className={styles.gray}>]</span>
             </div>
             <div className={styles.academic}>
                 <span className={styles.pink}>const <span className={styles.gray}>Formação</span> = <span className={styles.gray}>[</span></span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Sistemas para Internet"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"Estácio de Sá"</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2021</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2023</span></span>
-                <span style={{marginLeft: 40}} className={styles.gray}>{'}'},</span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Educação Física - Bacharelado"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"UNIASSELVI"</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2018</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2019</span></span>
-                <span style={{marginLeft: 40}} className={styles.gray}>{'}'}</span>
-                <span style={{marginLeft: 40}} className={styles.yellow}>"Educação Física - Licenciatura"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"UNIPÊ"</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2015</span>,</span>
-                <span style={{marginLeft: 80}} className={styles.gray}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2018</span></span>
-                <span style={{marginLeft: 40}} className={styles.gray}>{'}'}</span>
+                <span className={styles.yellow+' '+styles.margin1}>"Sistemas para Internet"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
+                <span className={styles.gray+' '+styles.margin2}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"Estácio de Sá"</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2021</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2023</span></span>
+                <span className={styles.gray+' '+styles.margin1}>{'}'},</span>
+                <span className={styles.yellow+' '+styles.margin1}>"Educação Física - Bacharelado"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
+                <span className={styles.gray+' '+styles.margin2}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"UNIASSELVI"</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2018</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2019</span></span>
+                <span className={styles.gray+' '+styles.margin1}>{'}'}</span>
+                <span className={styles.yellow+' '+styles.margin1}>"Educação Física - Licenciatura"<span className={styles.pink}> : </span><span className={styles.gray}>{'{'}</span></span>
+                <span className={styles.gray+' '+styles.margin2}>Universidade<span className={styles.pink}> : </span><span className={styles.yellow}>"UNIPÊ"</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Inicio<span className={styles.pink}> : </span><span className={styles.lightblue}>2015</span>,</span>
+                <span className={styles.gray+' '+styles.margin2}>Termino<span className={styles.pink}> : </span><span className={styles.lightblue}>2018</span></span>
+                <span className={styles.gray+' '+styles.margin1}>{'}'}</span>
                 <span className={styles.gray}>]</span>
             </div>
         </div>
