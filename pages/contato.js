@@ -1,8 +1,12 @@
+import Head from 'next/head'
 import styles from '../styles/CV.module.css'
 
 export default function Portifolio(){
     return (
         <div className={styles.cv}>
+        <Head>
+            <title>Contato - Patrick Chaves</title>
+        </Head>
             <div className={styles.frame}>
                 <h1>Meios de contato</h1>
                 <div className={styles.frameData}>

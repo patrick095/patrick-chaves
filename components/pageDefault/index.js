@@ -30,7 +30,6 @@ export default function PageDefault({children}) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Home - Patrick Chaves</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Patrick Chaves - Desenvolvedor Fullstack javascript" />
       </Head>

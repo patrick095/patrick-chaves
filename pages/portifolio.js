@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { createGitInstance } from "../services/api"
 import styles from '../styles/Portifolio.module.css'
 import LinkIcon from '@material-ui/icons/Link'
+import Head from "next/head"
 
 
 export default function Portifolio(){
@@ -24,6 +25,9 @@ export default function Portifolio(){
 
     return (
     <div className={styles.Portifolio}>
+    <Head>
+        <title>Portifólio - Patrick Chaves</title>
+    </Head>
         <div className={styles.gitList}>
             <h1>Repositórios Github</h1>
             {repos.map(repo =>{

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styles from '../styles/CV.module.css'
 
 function Formation({date, title, description, learning}){
@@ -13,6 +14,9 @@ function Formation({date, title, description, learning}){
 export default function CV(){
     return (
         <div className={styles.cv}>
+        <Head>
+            <title>Currículo - Patrick Chaves</title>
+        </Head>
             <div className={styles.frame}>
                 <h1>Formação Acadêmica</h1>
                 <Formation 

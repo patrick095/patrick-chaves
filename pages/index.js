@@ -1,10 +1,14 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import bannerImg from '../public/js-ts.png'
+import Head from 'next/head'
 
 export default function Home(){
     return (
     <div className={styles.home}>
+    <Head>
+        <title>Patrick Chaves</title>
+    </Head>
         <div className={styles.banner}>
             <div className={styles.bannerBackground}>
             </div>
