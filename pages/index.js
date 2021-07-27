@@ -18,13 +18,20 @@ export default function Home(){
             </div>
         </div>
         <div className={styles.about}>
-            <h1>{'<Sobre>'}</h1>
-            <p>Olá, me chamo Patrick Chaves, tenho 28 anos, estou morando em João Pessoa - PB. Desenvolvedor JavaScript com mais de 2 anos de experiência em projetos próprios desenvolvidos com essa linguagem. Tenho uma boa experiência em aplicações web utilizando ReactJs, NextJs, NodeJs e databases relacionais e não relacionais. Atualmente estou estudando TypeScript e React Native.</p>
-            <h1>{'</Sobre>'}</h1>
+            <h1>{'<About>'}</h1>
+            <p>Olá, me chamo Patrick Chaves, tenho 28 anos, e atualmente estou 
+                morando em João Pessoa - PB. Sou desenvolvedor FullStack com 2
+                anos de experiência em projetos próprios. Tenho uma boa experiência 
+                em aplicações web utilizando Typescript, ReactJs, NextJs, Vue, NodeJs, 
+                banco de dados relacionais e não relacionais. Atualmente estou em busca de 
+                uma primeira oportunidade para trabalhar na área, se você se está em 
+                busca de alguém com muita vontade de aprender e crescer junto com a 
+                empresa, entra em contato comigo!</p>
+            <h1>{'</About>'}</h1>
         </div>
         <div className={styles.others}>
             <div className={styles.stacks}>
-                <span className={styles.pink}>let <span className={styles.gray}>Stacks = [</span></span>
+                <span className={styles.pink}>let <span className={styles.gray}>Conhecimentos = [</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"JavaScript"<span className={styles.gray}>,</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"Typescript"<span className={styles.gray}>,</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"React"<span className={styles.gray}>,</span></span>
