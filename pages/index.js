@@ -37,6 +37,7 @@ export default function Home(){
             <div className={styles.stacks}>
                 <span className={styles.pink}>let <span className={styles.gray}>Conhecimentos = [</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"JavaScript"<span className={styles.gray}>,</span></span>
+                <span className={styles.yellow+' '+styles.margin1}>"PHP"<span className={styles.gray}>,</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"Typescript"<span className={styles.gray}>,</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"React"<span className={styles.gray}>,</span></span>
                 <span className={styles.yellow+' '+styles.margin1}>"NextJs"<span className={styles.gray}>,</span></span>
