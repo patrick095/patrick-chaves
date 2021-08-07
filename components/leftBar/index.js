@@ -5,7 +5,6 @@ import styles from './LeftBar.module.css'
 import profileImg from '../../public/perfil.jpeg'
 import createApi from '../../services/api'
 import Language from '../Language'
-import getAuthUserRepos from '../../services/gitLanguages'
 
 //aqui vai ficar estático por enquanto
 import userCoding from '../../languages-github.json'
@@ -17,20 +16,17 @@ export default function LeftBar(){
   const [ showNotification, setShowNotification ] = useState(false)
 
   useEffect(()=>{
-    let keys = Object.keys(userCoding)
-    setLanguages(keys)
-    setCoding(userCoding)
-    // api.get('/authuser?user=patrick095&token='+process.env.TOKEN)
-    // .then(res => {
-    //   console.log(res)
-    //     let keys = Object.keys(res.data)
-    //     setCoding(res.data)
-    //     setLanguages(keys)
-    // })
-    // getAuthUserRepos()
-    // .then(res =>{
-    //   console.log(res)
-    // })
+    const api = createApi()
+    // let keys = Object.keys(userCoding)
+    // setLanguages(keys)
+    // setCoding(userCoding)
+    api.get('/authuser?user=patrick095&token='+process.env.TOKEN)
+    .then(res => {
+      console.log(res)
+        let keys = Object.keys(res.data)
+        setCoding(res.data)
+        setLanguages(keys)
+    })
   },[])
 
   function toogleNotification(){
