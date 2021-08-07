@@ -20,7 +20,7 @@ export default function LeftBar(){
     // let keys = Object.keys(userCoding)
     // setLanguages(keys)
     // setCoding(userCoding)
-    api.get('/authuser?user=patrick095&token='+process.env.TOKEN)
+    api.get('/authuser?user=patrick095')
     .then(res => {
       console.log(res)
         let keys = Object.keys(res.data)
