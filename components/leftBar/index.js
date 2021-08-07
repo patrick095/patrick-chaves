@@ -17,9 +17,9 @@ export default function LeftBar(){
   const [ showNotification, setShowNotification ] = useState(false)
 
   useEffect(()=>{
-    // let keys = Object.keys(userCoding)
-    // setLanguages(keys)
-    // setCoding(userCoding)
+    let keys = Object.keys(userCoding)
+    setLanguages(keys)
+    setCoding(userCoding)
     // api.get('/authuser?user=patrick095&token='+process.env.TOKEN)
     // .then(res => {
     //   console.log(res)
@@ -27,10 +27,10 @@ export default function LeftBar(){
     //     setCoding(res.data)
     //     setLanguages(keys)
     // })
-    getAuthUserRepos()
-    .then(res =>{
-      console.log(res)
-    })
+    // getAuthUserRepos()
+    // .then(res =>{
+    //   console.log(res)
+    // })
   },[])
 
   function toogleNotification(){
