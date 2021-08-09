@@ -3,7 +3,7 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import Image from 'next/image'
 import styles from './LeftBar.module.css'
 import profileImg from '../../public/perfil.jpeg'
-import createApi from '../../services/api'
+import { createAPiInstance } from '../../services/api'
 import Language from '../Language'
 
 //aqui vai ficar estático por enquanto
@@ -16,7 +16,7 @@ export default function LeftBar(){
   const [ showNotification, setShowNotification ] = useState(false)
 
   useEffect(()=>{
-    const api = createApi()
+    const api = createAPiInstance()
     // let keys = Object.keys(userCoding)
     // setLanguages(keys)
     // setCoding(userCoding)
