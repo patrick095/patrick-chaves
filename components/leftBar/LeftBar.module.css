@@ -194,6 +194,9 @@
     right: 20px;
     z-index: 999999;
   }
+  .profile{
+    width: 100%;
+  }
   .coding {
     height: 30%;
   }
