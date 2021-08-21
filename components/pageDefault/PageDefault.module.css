@@ -262,6 +262,7 @@
     width: calc(100vw - 60px);
   }
   .footer {
+    display: none;
     width: 100vw;
     flex-direction: column-reverse;
     overflow: hidden;
