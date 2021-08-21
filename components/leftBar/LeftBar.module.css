@@ -9,7 +9,7 @@
     justify-content: flex-start;
   }
   .profile {
-    width: 100%;
+    width: 320px;
     height: 350px;
     position: relative;
     display: flex;
