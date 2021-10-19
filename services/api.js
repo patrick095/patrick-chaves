@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function createAPiInstance(){
     return axios.create({
-        baseURL: 'https://gitlanguages.patrickchaves.com.br'
+        baseURL: 'https://git-languages.herokuapp.com'
         // baseURL: 'localhost:3005'
     })
 }
