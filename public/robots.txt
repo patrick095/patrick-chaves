@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.patrickchaves.com.br
+
+# Sitemaps
+Sitemap: https://www.patrickchaves.com.br/sitemap.xml
