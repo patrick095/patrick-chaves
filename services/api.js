@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function createAPiInstance(){
     return axios.create({
-        baseURL: 'https://git-languages.herokuapp.com'
+        baseURL: 'https://github-languages.vercel.app/api'
         // baseURL: 'localhost:3005'
     })
 }

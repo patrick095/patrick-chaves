@@ -14,7 +14,7 @@ export default function LeftBar(){
 
   useEffect(()=>{
     const api = createAPiInstance()
-    api.get('/authuser?user=patrick095')
+    api.get('?user=patrick095')
     .then(res => {
       console.log(res)
         let keys = Object.keys(res.data)
