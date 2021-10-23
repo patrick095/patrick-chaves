@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/CV.module.css'
+import styles from '../styles/CV.module.scss'
 
 export default function Portifolio(){
     return (
@@ -13,21 +13,25 @@ export default function Portifolio(){
                     <span>Email: 
                         <a 
                         href="mailto:patrick095@gmail.com" 
+                        rel="noopener noreferrer"
                         target="_blank"> patrick095@gmail.com </a>
                     </span>
                     <span>Telegram:
                         <a 
                         href="https://t.me/patrick095" 
+                        rel="noopener noreferrer"
                         target="_blank"> patrick095 </a>
                     </span>
                     <span>Linkedin:
                         <a 
                         href="https://www.linkedin.com/in/patrick095/" 
+                        rel="noopener noreferrer"
                         target="_blank"> patrick095 </a>
                     </span>
                     <span>Github:
                         <a 
                         href="https://github.com/patrick095" 
+                        rel="noopener noreferrer"
                         target="_blank"> patrick095 </a>
                     </span>
                 </div>
