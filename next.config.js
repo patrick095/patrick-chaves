@@ -1,7 +1,11 @@
-require('dotenv').config()
+/** @type {import('next').NextConfig} */
+
+const path = require("path");
+
 module.exports = {
-    env: {
-        TOKEN: process.env.TOKEN
+    reactStrictMode: true,
+    sassOptions: {
+        includePaths: [path.join(__dirname, "src/styles")],
     },
     i18n: {
         locales: ['pt-br'],
@@ -13,4 +17,4 @@ module.exports = {
             }
         ]
     }
-}
+};

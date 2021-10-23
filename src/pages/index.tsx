@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import bannerImg from '../public/js-ts.png'
+/* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head'
+import styles from '../styles/Home.module.scss'
 
 export default function Home(){
     return (

@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/CV.module.css'
+import styles from '../styles/Cv.module.scss'
 
-function Formation({date, title, description, learning}){
+function Formation({date, title, description, learning}: {[key: string]: string}) {
     return (
                 <div className={styles.frameData}>
                     <span className={learning ? styles.learning : styles.finished}>{date}</span>
