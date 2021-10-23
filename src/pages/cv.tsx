@@ -54,8 +54,8 @@ export default function CV(){
                 <div className={styles.frameRow}>
                     <div className={styles.frameData+' '+styles.half}>
                     <h1>Hard Skills</h1>
-                        <span> - JavaScript, TypeScript, Python, PHP. </span>
-                        <span> - ReactJs, NextJs, VueJs.</span>
+                        <span> - JavaScript, TypeScript, PHP. </span>
+                        <span> - ReactJs, NextJs, Angular, VueJs.</span>
                         <span> - HTML5, CSS3. </span>
                         <span> - Versionamento Git.</span>
                         <span> - NodeJs.</span>
