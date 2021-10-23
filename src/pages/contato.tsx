@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/CV.module.scss'
+import styles from '../styles/Cv.module.scss'
 
 export default function Portifolio(){
     return (

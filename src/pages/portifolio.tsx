@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { createGitInstance } from "../services/api";
-import styles from "../styles/Portifolio.module.scss";
-import LinkIcon from "@material-ui/icons/Link";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { AxiosResponse } from "axios";
+import LinkIcon from "@material-ui/icons/Link";
+
+import styles from "../styles/Portifolio.module.scss";
+import { createGitInstance } from "../services/api";
 
 export default function Portifolio() {
     const [repos, setRepos] = useState<Array<any>>([]);
