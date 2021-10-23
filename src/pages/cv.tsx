@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/CV.module.scss'
+import styles from '../styles/Cv.module.scss'
 
 function Formation({date, title, description, learning}: {[key: string]: string}) {
     return (
