@@ -88,7 +88,7 @@ export default function LeftBar() {
             <div className={styles.downloadCV}>
                 <div className={styles.separator}></div>
                 <a
-                    href="https://drive.google.com/file/d/1k93HCxIGKdQiAmHqP5ETTEi_8YoA-UJX/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1Hm6dOoKqnpVpRUDmXzUgIruWFnLjXMht/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer noopner"
                 >
