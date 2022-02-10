@@ -13,7 +13,7 @@ export default function Home() {
                 <div className={styles.bannerText}>
                     <span>
                         <span className={styles.pink}>function</span>{" "}
-                        <span className={styles.green}>wellcome</span>() {"{"}
+                        <span className={styles.green}>welcome</span>() {"{"}
                     </span>
                     <span style={{ marginLeft: 40 }}>
                         <span className={styles.pink}>
