@@ -41,8 +41,7 @@ export default function Home() {
                 <p>
                     Olá, me chamo Patrick Chaves, tenho 28 anos, e atualmente
                     estou morando em João Pessoa - PB. Sou desenvolvedor
-                    FullStack com mais de 2 anos de experiência em projetos
-                    próprios e atualmente estou trabalhando como desenvolvedor front-end.
+                    Front-end com mais de 4 anos de experiência e atualmente estou trabalhando como desenvolvedor front-end.
                 </p>
                 <h1>{"</About>"}</h1>
             </div>
