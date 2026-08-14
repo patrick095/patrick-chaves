@@ -1,0 +1,59 @@
+<section [id]="content().id" [attr.aria-labelledby]="content().id + '-title'">
+  <app-container>
+    <app-section-heading
+      [headingId]="content().id + '-title'"
+      [eyebrow]="content().eyebrow"
+      [title]="content().title"
+      [description]="content().introduction"
+    />
+
+    <ol class="experience-list">
+      @for (experience of content().items; track experience.id) {
+        <li>
+          <article>
+            <header class="company-heading">
+              <div>
+                <h3>{{ experience.company }}</h3>
+                <p class="company-context">{{ experience.context }}</p>
+              </div>
+              <p class="company-period">{{ experience.companyPeriod }}</p>
+            </header>
+
+            <div class="experience-details">
+              <ol class="role-list" [attr.aria-label]="experience.company">
+                @for (role of experience.roles; track role.title) {
+                  <li>
+                    <h4>{{ role.title }}</h4>
+                    <p>{{ role.period }}</p>
+                  </li>
+                }
+              </ol>
+
+              <ul class="highlight-list">
+                @for (highlight of experience.highlights; track highlight) {
+                  <li>{{ highlight }}</li>
+                }
+              </ul>
+            </div>
+
+            <ul class="technology-list">
+              @for (technology of experience.technologies; track technology) {
+                <li>{{ technology }}</li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+
+    <aside class="resume-callout">
+      <p>{{ content().resumePrompt }}</p>
+      <a
+        [href]="resume().href"
+        [attr.download]="resume().filename"
+      >
+        {{ content().resumeAction }}
+      </a>
+    </aside>
+  </app-container>
+</section>

@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+section {
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--color-border);
+}
+
+.projects-list {
+  margin-top: var(--space-10);
+}

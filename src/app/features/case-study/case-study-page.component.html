@@ -1,0 +1,132 @@
+<main id="conteudo-principal" tabindex="-1">
+  <header id="inicio" class="case-hero">
+    <app-container>
+      <a class="back-link" href="/#projetos">← {{ messages().backToProjects }}</a>
+      <p class="eyebrow">{{ messages().eyebrow }}</p>
+      <h1>{{ project().headline.value }}</h1>
+      <p class="lead">{{ project().summary.value }}</p>
+
+      <div class="hero-meta">
+        <p>{{ project().category.value }}</p>
+        <p>{{ project().status.value }}</p>
+      </div>
+
+      <div class="hero-actions">
+        <a
+          [href]="project().links.repository.href"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {{ project().links.repository.label }} ↗
+          <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+        </a>
+        <a
+          [href]="project().links.release.href"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {{ project().links.release.label }} ↗
+          <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+        </a>
+      </div>
+    </app-container>
+  </header>
+
+  <section aria-labelledby="overview-title">
+    <app-container>
+      <div class="copy-block">
+        <p class="section-index">{{ messages().sections.overview }}</p>
+        <h2 id="overview-title">{{ project().overview.title.value }}</h2>
+        <p>{{ project().overview.body.value }}</p>
+      </div>
+
+      <figure [attr.aria-label]="project().diagram.accessibleName">
+        <p class="diagram-label">{{ project().diagram.label }}</p>
+        <ol>
+          @for (step of project().diagram.steps; track step) {
+            <li>{{ step }}</li>
+          }
+        </ol>
+        <figcaption>{{ project().diagram.caption }}</figcaption>
+      </figure>
+    </app-container>
+  </section>
+
+  <section class="surface-section" aria-labelledby="context-title">
+    <app-container>
+      <div class="two-column">
+        <div class="copy-block">
+          <p class="section-index">{{ messages().sections.technicalContext }}</p>
+          <h2 id="context-title">{{ project().technicalContext.title.value }}</h2>
+          <p>{{ project().technicalContext.body.value }}</p>
+        </div>
+        <aside aria-labelledby="constraints-title">
+          <h3 id="constraints-title">{{ project().constraints.title.value }}</h3>
+          <p>{{ project().constraints.body.value }}</p>
+        </aside>
+      </div>
+    </app-container>
+  </section>
+
+  <section aria-labelledby="pipeline-title">
+    <app-container>
+      <div class="copy-block">
+        <p class="section-index">{{ messages().sections.documentedFlow }}</p>
+        <h2 id="pipeline-title">{{ project().pipeline.title.value }}</h2>
+      </div>
+      <ol class="pipeline-list">
+        @for (step of project().pipeline.steps; track step.id; let index = $index) {
+          <li>
+            <span aria-hidden="true">{{ index + 1 }}</span>
+            <div>
+              <h3>{{ step.label.value }}</h3>
+              <p>{{ step.description.value }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+    </app-container>
+  </section>
+
+  <section class="surface-section" aria-labelledby="decisions-title">
+    <app-container>
+      <div class="copy-block">
+        <p class="section-index">{{ messages().sections.architecture }}</p>
+        <h2 id="decisions-title">{{ project().decisions.title.value }}</h2>
+      </div>
+      <div class="decision-list">
+        @for (decision of project().decisions.items; track decision.id) {
+          <article>
+            <h3>{{ decision.title.value }}</h3>
+            <p>{{ decision.body.value }}</p>
+          </article>
+        }
+      </div>
+    </app-container>
+  </section>
+
+  <section aria-labelledby="status-title">
+    <app-container>
+      <div class="two-column">
+        <div class="copy-block">
+          <p class="section-index">{{ messages().sections.publicStatus }}</p>
+          <h2 id="status-title">{{ project().publicStatus.title.value }}</h2>
+          <p>{{ project().publicStatus.body.value }}</p>
+        </div>
+        <aside class="sources" aria-labelledby="sources-title">
+          <h3 id="sources-title">{{ messages().sourcesTitle }}</h3>
+          <ul>
+            @for (source of sources(); track source.id) {
+              <li>
+                <a [href]="source.href" target="_blank" rel="noreferrer noopener">
+                  {{ source.label }} ↗
+                  <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+                </a>
+              </li>
+            }
+          </ul>
+        </aside>
+      </div>
+    </app-container>
+  </section>
+</main>

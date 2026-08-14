@@ -1,0 +1,22 @@
+<section [id]="content().id" [attr.aria-labelledby]="content().id + '-title'">
+  <app-container>
+    <div class="contact-panel">
+      <div>
+        <p class="eyebrow">{{ content().eyebrow }}</p>
+        <h2 [id]="content().id + '-title'">{{ content().title }}</h2>
+        <p class="body">{{ content().body }}</p>
+      </div>
+      <div class="actions">
+        <button
+          type="button"
+          class="primary-trigger"
+          (click)="contactModal.show()"
+        >
+          {{ primaryAction().label }}
+        </button>
+        <app-button-link [link]="secondaryAction()" variant="secondary" />
+        <app-button-link [link]="supportingAction()" variant="quiet" />
+      </div>
+    </div>
+  </app-container>
+</section>

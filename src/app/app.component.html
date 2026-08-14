@@ -1,0 +1,17 @@
+<a class="skip-link" href="#conteudo-principal">{{ content.messages().common.skipToContent }}</a>
+<app-site-header
+  [name]="content.portfolio().site.name"
+  [navigation]="content.navigation()"
+  [contactLink]="content.resolveLink('email')"
+  [messages]="content.messages().header"
+  [resume]="content.resume()"
+/>
+<router-outlet />
+<app-site-footer
+  [name]="content.portfolio().site.name"
+  [navigation]="content.navigation()"
+  [links]="content.footerLinks()"
+  [messages]="content.messages().footer"
+  [opensInNewTab]="content.messages().common.opensInNewTab"
+/>
+<app-contact-choice-modal />
