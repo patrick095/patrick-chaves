@@ -1,0 +1,57 @@
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+    <app-container>
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="name">{{ content().name }}</p>
+                <h1 id="hero-title" class="professional-title">
+                    {{ content().professionalTitle }}
+                </h1>
+                <p class="supporting-text">{{ content().supportingText }}</p>
+
+                <div class="hero-actions">
+                    <app-button-link [link]="primaryAction()" />
+                    <app-button-link
+                        [link]="secondaryAction()"
+                        variant="secondary"
+                    />
+                </div>
+
+                <app-social-links
+                    [links]="supportingActions()"
+                    [ariaLabel]="content().professionalChannelsLabel"
+                />
+            </div>
+
+            <div class="portrait-frame">
+                <picture>
+                    <source
+                        type="image/avif"
+                        srcset="
+                            images/patrick-profile-480.avif   480w,
+                            images/patrick-profile-768.avif   768w,
+                            images/patrick-profile-1086.avif 1086w
+                        "
+                        sizes="(min-width: 1024px) 480px, (min-width: 480px) 70vw, calc(100vw - 32px)"
+                    />
+                    <source
+                        type="image/webp"
+                        srcset="
+                            images/patrick-profile-480.webp   480w,
+                            images/patrick-profile-768.webp   768w,
+                            images/patrick-profile-1086.webp 1086w
+                        "
+                        sizes="(min-width: 1024px) 480px, (min-width: 480px) 70vw, calc(100vw - 32px)"
+                    />
+                    <img
+                        src="images/patrick-profile-1086.webp"
+                        [alt]="content().portrait.alt"
+                        [width]="content().portrait.width"
+                        [height]="content().portrait.height"
+                        loading="eager"
+                        fetchpriority="high"
+                    />
+                </picture>
+            </div>
+        </div>
+    </app-container>
+</section>

@@ -1,0 +1,31 @@
+<footer>
+  <app-container>
+    <div class="footer-grid">
+      <div>
+        <a class="footer-name" href="#inicio">{{ name() }}</a>
+        <p>{{ messages().tagline }}</p>
+      </div>
+      <nav [attr.aria-label]="messages().navigationLabel">
+        @for (item of navigation(); track item.href) {
+          <a [href]="item.href">{{ item.label }}</a>
+        }
+      </nav>
+      <nav [attr.aria-label]="messages().professionalLinksLabel">
+        @for (link of links(); track link.id) {
+          <a
+            [href]="link.href"
+            [attr.target]="link.external ? '_blank' : null"
+            [attr.rel]="link.external ? 'noreferrer noopener' : null"
+          >
+            {{ link.label }}
+            @if (link.external) {
+              <span aria-hidden="true">↗</span>
+              <span class="visually-hidden"> ({{ opensInNewTab() }})</span>
+            }
+          </a>
+        }
+      </nav>
+    </div>
+    <p class="copyright">{{ copyright() }}</p>
+  </app-container>
+</footer>

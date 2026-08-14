@@ -1,0 +1,20 @@
+<section [id]="content().id" [attr.aria-labelledby]="content().id + '-title'">
+  <app-container>
+    <app-section-heading
+      [headingId]="content().id + '-title'"
+      [eyebrow]="content().eyebrow"
+      [title]="content().title"
+      [description]="content().introduction"
+    />
+
+    <div class="technology-grid">
+      @for (group of content().groups; track group.id) {
+        <article>
+          <p class="category">{{ group.category }}</p>
+          <h3>{{ group.name }}</h3>
+          <p class="context">{{ group.context }}</p>
+        </article>
+      }
+    </div>
+  </app-container>
+</section>

@@ -1,0 +1,21 @@
+@if (content().items.length > 0) {
+  <section [id]="content().id" [attr.aria-labelledby]="content().id + '-title'">
+    <app-container>
+      <app-section-heading
+        [headingId]="content().id + '-title'"
+        [eyebrow]="content().eyebrow"
+        [title]="content().title"
+        [description]="content().introduction"
+      />
+
+      <div class="projects-list">
+        @for (project of content().items; track project.slug) {
+          <app-project-card
+            [project]="project"
+            [technologiesLabel]="content().documentedTechnologiesLabel"
+          />
+        }
+      </div>
+    </app-container>
+  </section>
+}

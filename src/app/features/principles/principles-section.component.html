@@ -1,0 +1,19 @@
+<section [id]="content().id" [attr.aria-labelledby]="content().id + '-title'">
+  <app-container>
+    <app-section-heading
+      [headingId]="content().id + '-title'"
+      [eyebrow]="content().eyebrow"
+      [title]="content().title"
+      [description]="content().introduction"
+    />
+    <ol>
+      @for (principle of content().items; track principle.id; let index = $index) {
+        <li>
+          <span aria-hidden="true">0{{ index + 1 }}</span>
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.description }}</p>
+        </li>
+      }
+    </ol>
+  </app-container>
+</section>

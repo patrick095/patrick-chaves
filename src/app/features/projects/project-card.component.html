@@ -1,0 +1,34 @@
+<article class="project-card" [attr.aria-labelledby]="project().slug + '-title'">
+  <div class="project-card__meta">
+    <p>{{ project().eyebrow.value }}</p>
+    <p>{{ project().status.value }}</p>
+  </div>
+
+  <div class="project-card__content">
+    <p class="category">{{ project().category.value }}</p>
+    <h3 [id]="project().slug + '-title'">{{ project().name.value }}</h3>
+    <p class="summary">{{ project().summary.value }}</p>
+  </div>
+
+  <ul class="technologies" [attr.aria-label]="technologiesLabel()">
+    @for (technology of project().technologies; track technology.value) {
+      <li>{{ technology.value }}</li>
+    }
+  </ul>
+
+  <div class="project-card__actions">
+    <a class="primary-link" [routerLink]="project().links.caseStudy.href">
+      {{ project().links.caseStudy.label }}
+    </a>
+    <a
+      class="repository-link"
+      [href]="project().links.repository.href"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      {{ project().links.repository.label }}
+      <span aria-hidden="true">↗</span>
+      <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+    </a>
+  </div>
+</article>

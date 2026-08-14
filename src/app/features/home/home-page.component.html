@@ -1,0 +1,25 @@
+<main id="conteudo-principal" tabindex="-1">
+  <app-hero
+    [content]="content().hero.value"
+    [primaryAction]="localizedContent.resolveLink(content().hero.value.primaryAction)"
+    [secondaryAction]="localizedContent.resolveLink(content().hero.value.secondaryAction)"
+    [supportingActions]="[
+      localizedContent.resolveLink(content().hero.value.supportingActions[0]),
+      localizedContent.resolveLink(content().hero.value.supportingActions[1]),
+    ]"
+  />
+  <app-professional-summary [content]="content().summary.value" />
+  <app-experience-section
+    [content]="content().experience.value"
+    [resume]="localizedContent.resume()"
+  />
+  <app-projects-section [content]="content().projects.value" />
+  <app-technologies-section [content]="content().technologies.value" />
+  <app-principles-section [content]="content().principles.value" />
+  <app-contact-section
+    [content]="content().contact.value"
+    [primaryAction]="localizedContent.resolveLink(content().contact.value.primaryAction)"
+    [secondaryAction]="localizedContent.resolveLink(content().contact.value.secondaryAction)"
+    [supportingAction]="localizedContent.resolveLink(content().contact.value.supportingAction)"
+  />
+</main>

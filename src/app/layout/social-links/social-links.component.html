@@ -1,0 +1,19 @@
+<nav [attr.aria-label]="ariaLabel()">
+  <ul>
+    @for (link of links(); track link.id) {
+      <li>
+        <a
+          [href]="link.href"
+          [attr.target]="link.external ? '_blank' : null"
+          [attr.rel]="link.external ? 'noreferrer noopener' : null"
+        >
+          {{ link.label }}
+          @if (link.external) {
+            <span aria-hidden="true">↗</span>
+            <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+          }
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

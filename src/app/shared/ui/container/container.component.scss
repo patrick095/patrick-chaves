@@ -1,0 +1,8 @@
+:host {
+  display: block;
+}
+
+.container {
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--content-max));
+  margin-inline: auto;
+}

@@ -1,0 +1,12 @@
+<a
+  class="button-link button-link--{{ variant() }}"
+  [href]="link().href"
+  [attr.target]="link().external ? '_blank' : null"
+  [attr.rel]="link().external ? 'noreferrer noopener' : null"
+>
+  <span>{{ link().label }}</span>
+  @if (link().external) {
+    <span class="external-mark" aria-hidden="true">↗</span>
+    <span class="visually-hidden"> ({{ i18n.messages().common.opensInNewTab }})</span>
+  }
+</a>
